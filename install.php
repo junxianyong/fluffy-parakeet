@@ -9,7 +9,7 @@ if($_GET['secret'] === $secret) {
     
 	$dbh = new PDO('sqlsrv:server = ' . $db_host . '; Database = ' . $db_name, $db_user, $db_pass);
 	$sql = "CREATE TABLE users (
-    	id int(10) unsigned NOT NULL AUTO_INCREMENT,
+    	id int(10) NOT NULL AUTO_INCREMENT,
     	username varchar(64) NOT NULL,
     	password varchar(64) NOT NULL,
     	PRIMARY KEY (id)
