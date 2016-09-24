@@ -9,7 +9,7 @@ $db_user = getenv('DB_USER');
 $db_pass = getenv('DB_PASS');
 
 $dbh = new PDO('sqlsrv:server = ' . $db_host . '; Database = ' . $db_name, $db_user, $db_pass);
-$stmt = $dbh->prepare("SELECT * FROM `users` where `username` = ? AND `password` = ?");
+$stmt = $dbh->prepare("SELECT * FROM 'users' where 'username' = ? AND 'password' = ?");
 $stmt->execute([$username, $password]);
 
 
